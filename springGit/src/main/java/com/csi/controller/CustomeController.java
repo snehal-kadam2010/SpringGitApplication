@@ -29,4 +29,8 @@ public class CustomeController {
  public ResponseEntity<List<Vehicle>> getData(){
   return ResponseEntity.ok(Stream.of(new Vehicle(11,"swara",45000),new Vehicle(12,"ram",58000)).collect(Collectors.toList()));
  }
+ @GetMapping("/getdata")
+ public  ResponseEntity<String> getAllData(){
+  return  ResponseEntity.ok("Get All Data");
+ }
 }
